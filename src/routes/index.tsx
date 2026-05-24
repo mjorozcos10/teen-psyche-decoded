@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import {
   Brain, Menu, X, Home, BookOpen, HeartPulse, Users, ShieldCheck, FileText,
   Sparkles, Target, Compass, Timer, Layers, Wind, Activity, Heart, ClipboardList,
-  HandHeart, AlertTriangle, Cigarette, GraduationCap, Handshake, LifeBuoy
+  HandHeart, AlertTriangle, Cigarette, GraduationCap, Handshake, LifeBuoy, MessageCircle
 } from "lucide-react";
 import { PomodoroTimer } from "@/components/PomodoroTimer";
 import { StressMeter } from "@/components/StressMeter";
 import { SpotlightSimulator } from "@/components/SpotlightSimulator";
 import { ReflectionBuilder } from "@/components/ReflectionBuilder";
 import { YerkesChart } from "@/components/YerkesChart";
+import { CommunityChat } from "@/components/CommunityChat";
 import heroBrain from "@/assets/hero-brain.jpg";
 import procrastinationImg from "@/assets/procrastination.jpg";
 import studyNotesImg from "@/assets/study-notes.jpg";
@@ -20,7 +21,7 @@ import shieldImg from "@/assets/shield.jpg";
 
 export const Route = createFileRoute("/")({ component: Page });
 
-type TabId = "home" | "study" | "stress" | "social" | "resist" | "portfolio";
+type TabId = "home" | "study" | "stress" | "social" | "resist" | "community" | "portfolio";
 
 const TABS: { id: TabId; label: string; icon: typeof Home }[] = [
   { id: "home", label: "Home", icon: Home },
@@ -28,6 +29,7 @@ const TABS: { id: TabId; label: string; icon: typeof Home }[] = [
   { id: "stress", label: "Stress & Mood", icon: HeartPulse },
   { id: "social", label: "Social & Squads", icon: Users },
   { id: "resist", label: "Resistance", icon: ShieldCheck },
+  { id: "community", label: "Community", icon: MessageCircle },
   { id: "portfolio", label: "Portfolio", icon: FileText },
 ];
 
@@ -46,6 +48,7 @@ function Page() {
         {tab === "stress" && <StressTab />}
         {tab === "social" && <SocialTab />}
         {tab === "resist" && <ResistTab />}
+        {tab === "community" && <CommunityTab />}
         {tab === "portfolio" && <PortfolioTab />}
       </main>
       <Footer />
@@ -396,6 +399,22 @@ function ResistTab() {
 }
 
 /* ----------- PORTFOLIO ----------- */
+function CommunityTab() {
+  return (
+    <>
+      <PageHero kicker="Tab 06 · Community" accent="from-violet-700 via-fuchsia-600 to-rose-600"
+        title="Community Wall: you are not the only one."
+        sub="A live, open chat for anyone surviving high school. Share a tactic that worked, a meltdown you escaped, or just say hi." />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <CommunityChat />
+        <p className="mt-6 text-sm text-slate-500 text-center">
+          In crisis? Don't post — call or text <span className="font-bold text-slate-700">988</span>. Real help, right now.
+        </p>
+      </div>
+    </>
+  );
+}
+
 function PortfolioTab() {
   const refs = [
     "Foshee, V. A., Bauman, K. E., Ennett, S. T., Linder, G. F., Benefield, T., & Suchindran, C. (2004). Assessing the long-term effects of the Safe Dates program and a booster in preventing and reducing adolescent dating violence victimization and perpetration. American Journal of Public Health, 94(4), 619–624.",
