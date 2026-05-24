@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Evidence-based psychology hacks for high schoolers: cognition, stress, social spotlight, and resistance." },
       { name: "author", content: "Construction Zone" },
       { property: "og:title", content: "Construction Zone — The Teen Brain Operator's Manual" },
-      { property: "og:description", content: "Evidence-based psychology hacks for high schoolers." },
+      { property: "og:description", content: "Evidence-based psychology hacks for high schoolers: cognition, stress, social spotlight, and resistance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Construction Zone — The Teen Brain Operator's Manual" },
+      { name: "twitter:description", content: "Evidence-based psychology hacks for high schoolers: cognition, stress, social spotlight, and resistance." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3f27c838-ef9d-40aa-89aa-1b472d13d186/id-preview-c02e77ff--6d4a6f38-3fd0-4fa4-8140-0f70ae145afe.lovable.app-1779652673304.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3f27c838-ef9d-40aa-89aa-1b472d13d186/id-preview-c02e77ff--6d4a6f38-3fd0-4fa4-8140-0f70ae145afe.lovable.app-1779652673304.png" },
     ],
     links: [
       {
