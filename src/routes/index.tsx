@@ -424,7 +424,7 @@ function PortfolioTab() {
   ];
   return (
     <>
-      <PageHero kicker="Tab 06 · Portfolio" accent="from-violet-700 via-purple-700 to-fuchsia-700"
+      <PageHero kicker="Tab 07 · Portfolio" accent="from-violet-700 via-purple-700 to-fuchsia-700"
         title="Portfolio, Reflections & Citations."
         sub="Package what you learned. Cite what holds it up." />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
